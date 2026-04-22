@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Default (Light) Variables */
+  --color-dots-bg: #FBFBF9;
+  --color-dots-aside: #F2F2EB;
+  --color-dots-text: #1A1A1A;
+  --color-dots-accent: #6D28D9;
+  --color-dots-glass: rgba(255, 255, 255, 0.7);
+  --color-dots-border: rgba(0, 0, 0, 0.05);
+}
+
+/* Dark Mode Overrides */
+.dark {
+  --color-dots-bg: #050505;
+  --color-dots-aside: rgba(255, 255, 255, 0.04);
+  --color-dots-text: #FFFFFF;
+  --color-dots-accent: #A78BFA;
+  --color-dots-glass: rgba(15, 15, 20, 0.8);
+  --color-dots-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--color-dots-bg);
+  color: var(--color-dots-text);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.glass-box {
+  background: var(--color-dots-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--color-dots-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
